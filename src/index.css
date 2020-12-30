@@ -1,0 +1,61 @@
+:root {
+  --input-border-color: #d3d3d3;
+  --primary-color: #08147D;
+  --secondary-color: #8F0078;
+  --accent-color: #D42764;
+  --heading-font: 'Ubuntu', sans-serif;
+  --body-font: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  font-weight: 700;
+  margin:0;
+}
+
+h1 {
+  font-size: 54px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+input {
+  height: 32px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.error-msg {
+  font-size: 12px;
+  color: #ff0000;
+  margin-bottom: 15px;
+  margin-top: -15px;
+  margin-left: 5px;
+}
+
+nav > li {
+  list-style: none;
+}
