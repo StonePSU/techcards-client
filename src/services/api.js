@@ -2,6 +2,8 @@ import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 
 const api = (method, url, data) => {
+    let token = localStorage.getItem("token");
+    setTokenHeader(token);
     return new Promise((resolve, reject) => {
         axios({ method, url, data })
             .then((res) => {

@@ -22,7 +22,7 @@ function App() {
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/login" component={LoginPage} />
             <Route path="/signup" component={SignupPage} />
-            <Route render={() => (<h1>404: Page Not Found</h1>)} />
+            <Route render={() => (<h1>404: Page Is Not Found</h1>)} />
           </Switch>
         </Router>
       </PersistGate>

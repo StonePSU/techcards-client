@@ -22,24 +22,19 @@ const Dashboard = (props) => {
     }, []);
 
     return useAuth(props) && (
-        <main>
-            <section>
-                <h1>Dashboard</h1>
-                <div className="dashboard">
-                    <nav>
-                        <li><Link to={`${props.match.path}/classes`}>My Classes</Link></li>
-                        <li><Link to={`${props.match.path}/decks`}>My Decks</Link></li>
-                        <li><a href="#" onClick={handleClick} >Logout</a></li>
-                    </nav>
-                    <Switch>
-                        <Route exact path={`${props.match.path}/classes`} component={ClassList} />
-                        <Route path={`${props.match.path}/classes/:id`} component={ClassPage} />
-                        <Route path={`${props.match.path}/decks`} component={DeckPage} />
-                        <Route render={() => <h1>404 Not Found</h1>} />
-                    </Switch>
-                </div>
-            </section>
-        </main>
+        <div className="dashboard">
+            <nav style={{ padding: "40px" }}>
+                <li><Link to={`${props.match.path}/classes`}>My Classes</Link></li>
+                <li><Link to={`${props.match.path}/decks`}>My Decks</Link></li>
+                <li><a href="#" onClick={handleClick} >Logout</a></li>
+            </nav>
+            <Switch>
+                <Route exact path={`${props.match.path}/classes`} component={ClassList} />
+                <Route path={`${props.match.path}/classes/:id`} component={ClassPage} />
+                <Route path={`${props.match.path}/decks`} component={DeckPage} />
+                <Route render={() => <h1>General Dashboard Content</h1>} />
+            </Switch>
+        </div>
     )
 }
 

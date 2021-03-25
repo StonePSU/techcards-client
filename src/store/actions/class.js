@@ -85,7 +85,7 @@ const getCurrentClass = (classId) => {
     return dispatch => {
         dispatch(setPageError(null));
         dispatch(setLoading(true));
-        api("get", `/api/class/${classId}?expand=owner`)
+        api("get", `/api/class/${classId}?expand=owner decks`)
             .then(res => {
                 dispatch(setLoading(false));
                 dispatch(setCurrentClass(res));
